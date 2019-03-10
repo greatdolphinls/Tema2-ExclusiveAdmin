@@ -19,12 +19,12 @@ module DevdapApp
     # -- all .rb files in that directory are automatically loaded.
     config.assets.initialize_on_precompile = false
      # Precompile Assets For Index
-     config.assets.precompile += ['index.js']
+    #  config.assets.precompile += ['index.js']
 
   
-    # Precompile Assets  
-    config.assets.precompile += ['interface.css','forms.css','tables.css', 'chart_view.css', 'app_view.css']
-    config.assets.precompile += ['interface.js', 'pages.js','forms.js','tables.js','chart_view.js','app_view.js']
+    # # Precompile Assets  
+    # config.assets.precompile += ['interface.css','forms.css','tables.css', 'chart_view.css', 'app_view.css']
+    # config.assets.precompile += ['interface.js', 'pages.js','forms.js','tables.js','chart_view.js','app_view.js']
 
 
 

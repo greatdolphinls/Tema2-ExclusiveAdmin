@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Flot Chart Css -->
+      <%= stylesheet_link_tag    'chart_view', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Flot Chart Js -->
+      <%= javascript_include_tag 'chart_view', 'data-turbolinks-track': 'reload' %>
+
+     <!-- Custom JavaScript For Flot Chart Page-->
+      <script>$(function(){var u=[[0,26],[1,24],[2,29],[3,26],[4,33],[5,26],[6,36],[7,28]];var x={series:{splines:{show:true,tension:0.4,lineWidth:1,fill:0.5},},grid:{tickColor:"#e4e5e7",borderWidth:1,borderColor:"#e4e5e7",color:"#6a6c6f"},colors:["#C97CE5","#efefef"],};$.plot($("#flot-line-chart"),[u],x);var v=[{label:"bar",data:[[1,12],[2,14],[3,18],[4,24],[5,32],[6,22]]}];var i={series:{bars:{show:true,barWidth:0.8,fill:true,fillColor:{colors:[{opacity:0.6},{opacity:0.6}]},lineWidth:1}},xaxis:{tickDecimals:0},colors:["#C97CE5"],grid:{color:"#e4e5e7",hoverable:true,clickable:true,tickColor:"#D4D4D4",borderWidth:0,borderColor:"e4e5e7",},legend:{show:false},tooltip:true,tooltipOpts:{content:"x: %x, y: %y"}};$.plot($("#flot-bar-chart"),v,i);var w=[{label:"Data 1",data:16,color:"rgba(201,124,229,0.6)",},{label:"Data 2",data:6,color:"rgba(201,124,229,1)",},{label:"Data 3",data:22,color:"rgba(201,124,229,0.4)",},{label:"Data 4",data:32,color:"rgba(201,124,229,0.2)",}];var o={series:{pie:{show:true}},grid:{hoverable:true},tooltip:true,tooltipOpts:{content:"%p.0%, %s",shifts:{x:20,y:0},defaultTheme:false}};$.plot($("#flot-pie-chart"),w,o);var y=[{label:"line",data:[[1,24],[2,15],[3,29],[4,34],[5,30],[6,40],[7,23],[8,27],[9,40]]}];var p={series:{lines:{show:true,lineWidth:1,fill:true,fillColor:{colors:[{opacity:0.5},{opacity:0.5}]}}},xaxis:{tickDecimals:0},colors:["#C97CE5"],grid:{tickColor:"#e4e5e7",borderWidth:1,borderColor:"#e4e5e7",color:"#6a6c6f"},legend:{show:false},tooltip:true,tooltipOpts:{content:"x: %x, y: %y"}};$.plot($("#flot-area-chart"),y,p);var s=[],q=[];for(var t=0;t<14;t+=0.5){s.push([t,Math.sin(t)]);q.push([t,Math.cos(t)])}var z=[{data:s,label:"sin(x)"},{data:q,label:"cos(x)"}];var r={series:{lines:{show:true},points:{show:true}},grid:{tickColor:"#e4e5e7",borderWidth:1,borderColor:"#e4e5e7",color:"#6a6c6f"},yaxis:{min:-1.2,max:1.2},colors:["#C97CE5","#efefef"],};$.plot($("#flot-sin-chart"),z,r)});</script>
+   
+    </body>
+</html>

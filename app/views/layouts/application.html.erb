@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+      <!-- Sidebar Partials -->
+      <%= render 'layouts/sidebar' %>
+      <%= yield %>
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     
+   </body>
+</html>

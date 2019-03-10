@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Chartist Css -->
+      <%= stylesheet_link_tag    'chart_view', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Chartist Js -->
+      <%= javascript_include_tag 'chart_view', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Chartist Page-->
+      <script>$(function(){new Chartist.Line("#ct-chart1",{labels:["Monday","Tuesday","Wednesday","Thursday","Friday"],series:[[6,8,7,4,6],[5,7,6,3,5],[4,6,5,2,4]]},{fullWidth:true,chartPadding:{right:40}});new Chartist.Line("#ct-chart7",{labels:[1,2,3,4,5,6,7,8],series:[[5,9,7,8,5,3,5,4]]},{low:0,showArea:true});new Chartist.Bar("#ct-chart3",{labels:["Q1","Q2","Q3","Q4"],series:[[800000,1200000,1400000,1200000],[200000,400000,500000,300000],[300000,300000,400000,600000]]},{stackBars:true,axisY:{labelInterpolationFnc:function(c){return(c/1000)+"k"}}}).on("draw",function(c){if(c.type==="bar"){c.element.attr({style:"stroke-width: 30px"})}});new Chartist.Bar("#ct-chart4",{labels:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],series:[[2,3,4,5,6,7,8],[3,4,5,6,7,8,9]]},{seriesBarDistance:10,reverseData:true,horizontalBars:true,axisY:{offset:70}});var b={series:[10,5,5]};var a=function(d,c){return d+c};new Chartist.Pie("#ct-chart5",b,{labelInterpolationFnc:function(c){return Math.round(c/b.series.reduce(a)*100)+"%"}});new Chartist.Pie("#ct-chart6",{series:[25,25,25,25]},{donut:true,donutWidth:60,startAngle:270,total:200,showLabel:false})});</script>
+      
+      
+    </body>
+</html>

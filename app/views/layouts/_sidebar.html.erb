@@ -1,0 +1,285 @@
+<aside id="menu">
+   <div id="navigation">
+      <ul class="nav" id="side-menu">
+         <li class="active">
+            <%= link_to root_path do %>
+            <%= content_tag :span, "Dashboard", :class => "nav-label" %>
+            <span class="label label-success pull-right">v.1</span>
+            <% end %>
+         </li>
+         <li>
+            <%= link_to pages_Analytic_path do %>
+            <%= content_tag :span, "Analytics", :class => "nav-label" %>
+            <span class="label label-warning pull-right">NEW</span>
+            <% end %>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Interface</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <%= link_to "Panel Design", interface_PanelDesign_path %>
+               </li>
+               <li>
+                  <%= link_to "Typography", interface_Typography_path %>
+               </li>
+               <li>
+                  <%= link_to "Colors & Buttons", interface_Buttons_path %>
+               </li>
+               <li>
+                  <%= link_to "Components", interface_Components_path %>
+               </li>
+               <li>
+                  <%= link_to "Alerts", interface_Alerts_path %>
+               </li>
+               <li>
+                  <%= link_to "Modals", interface_Modals_path %>
+               </li>
+               <li>
+                  <%= link_to "LoadingButtons", interface_LoadingButtons_path %>
+               </li>
+               <li>
+                  <%= link_to "DraggablePanel", interface_DraggablePanel_path %>
+               </li>
+               <li>
+                  <%= link_to "CodeEditor", interface_CodeEditor_path %>
+               </li>
+               <li>
+                  <%= link_to "EmailTemplate", interface_EmailTemplate_path %>
+               </li>
+               <li>
+                  <%= link_to "List", interface_List_path %>
+               </li>
+               <li>
+                  <%= link_to "Tour", interface_Tour_path %>
+               </li>
+               <li>
+                  <%= link_to "IconsLibrary", interface_IconsLibrary_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">App views</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <%= link_to "Contact", app_views_Contact_path %>
+               </li>
+               <li>
+                  <%= link_to "Projects", app_views_Projects_path %>
+               </li>
+               <li>
+                  <%= link_to "Project Detail", app_views_ProjectDetails_path %>
+               </li>
+               <li>
+                  <%= link_to "App plans", app_views_AppPlans_path %>
+               </li>
+               <li>
+                  <%= link_to "Social board", app_views_SocialBoard_path %>
+               </li>
+               <li>
+                  <%= link_to "FAQ", app_views_FAQ_path %>
+               </li>
+               <li>
+                  <%= link_to "Timeline", app_views_Timeline_path %>
+               </li>
+               <li>
+                  <%= link_to "Notes", app_views_Notes_path %>
+               </li>
+               <li>
+                  <%= link_to "Profile", app_views_Profile_path %>
+               </li>
+               <li>
+                  <%= link_to "Mailbox", app_views_Mailbox_path %>
+               </li>
+               <li>
+                  <%= link_to "Email Compose", app_views_EmailCompose_path %>
+               </li>
+               <li>
+                  <%= link_to "Email view", app_views_EmailView_path %>
+               </li>
+               <li>
+                  <%= link_to "Blog", app_views_Blog_path %>
+                  
+               </li>
+               <li>
+                  <%= link_to "Blog article", app_views_BlogArticle_path %>
+               </li>
+               <li>
+                  <%= link_to "Forum", app_views_Forum_path %>
+               </li>
+               <li>
+                  <%= link_to "Forum details", app_views_ForumDetails_path %>
+               </li>
+               <li>
+                  <%= link_to "Gallery", app_views_Gallery_path %>
+               </li>
+               <li>
+                  <%= link_to "Calendar", app_views_Calendar_path %>
+               </li>
+               <li>
+                  <%= link_to "Invoice", app_views_Invoice_path %>
+               </li>
+               <li>
+                  <%= link_to "File manager", app_views_FileManager_path %>
+                
+               </li>
+               <li>
+                  <%= link_to "Chat view", app_views_ChatView_path %>
+               </li>
+               <li>
+                  <%= link_to "Search view", app_views_SearchView_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Charts</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <%= link_to "Chart Js", charts_ChartJs_path %>
+               </li>
+               <li>
+                  <%= link_to "Flot Chart", charts_FlotChart_path %>
+               </li>
+               <li>
+                  <%= link_to "Inline Graph", charts_InlineGraph_path %>
+               </li>
+               <li>
+                  <%= link_to "Chartist", charts_Chartist_path %>
+               </li>
+               <li>
+                  <%= link_to "C3 Charts", charts_C3Charts_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Box transitions</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                <%= link_to box_transitions_Overview_path do %>
+                <%= content_tag :span, "Overview", :class => "nav-label" %>
+                <span class="label label-success pull-right">Start</span>
+                <% end %>
+               </li>
+               <li>
+                  <%= link_to "Columns from up", box_transitions_ColumnUp_path %>
+               </li>
+               <li>
+                  <%= link_to "Columns Custom", box_transitions_ColumnCustom_path %>
+               </li>
+               <li>
+                  <%= link_to "Panel Zoom", box_transitions_PanelZoom_path %>
+               </li>
+               <li>
+                  <%= link_to "Row From down", box_transitions_RowDown_path %>
+               </li>
+               <li>
+                  <%= link_to "Rows From Right", box_transitions_RowRight_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Common views</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <%= link_to "Login", common_views_Login_path %>
+               </li>
+               <li>
+                  <%= link_to "Register", common_views_Register_path %>
+               </li>
+               <li>
+                  <%= link_to "Error 404", common_views_ErrorFour_path %>
+               </li>
+               <li>
+                  <%= link_to "Error 505", common_views_ErrorFive_path %>
+               </li>
+               <li>
+                  <%= link_to "Lock Screen", common_views_LockScreen_path %>
+               </li>
+               <li>
+                  <%= link_to "Password Recovery", common_views_PasswordRecovery_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Tables</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <%= link_to "Table Design", tables_TableDesign_path %>
+               </li>
+               <li>
+                  <%= link_to "Data Table", tables_DataTable_path %>
+               </li>
+               <li>
+                  <%= link_to "Foo Table", tables_FooTable_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <%= link_to pages_Widgets_path do %>
+            <%= content_tag :span, "Widgets", :class => "nav-label" %>
+            <span class="label label-success pull-right">Special</span>
+            <% end %>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Forms</span>
+            <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <%= link_to "Form Element", forms_FormElement_path %>
+               </li>
+               <li>
+                  <%= link_to "Form Extended", forms_FormExtended_path %>
+               </li>
+               <li>
+                  <%= link_to "Text Editor", forms_TextEditor_path %>
+               </li>
+               <li>
+                  <%= link_to "Wizard", forms_Wizard_path %>
+               </li>
+               <li>
+                  <%= link_to "Validation", forms_Validation_path %>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <%= link_to pages_LayoutOptions_path do %>
+            <%= content_tag :span, "Layout Options", :class => "nav-label" %>
+            <% end %>
+         </li>
+         <li>
+            <%= link_to pages_GridSystem_path do %>
+            <%= content_tag :span, "GridSystem", :class => "nav-label" %>
+            <% end %>
+         </li>
+         <li>
+            <a href="#">
+            <span class="nav-label">Landing page</span>
+            </a>
+         </li>
+         <li>
+            <%= link_to pages_Package_path do %>
+            <%= content_tag :span, "Package", :class => "nav-label" %>
+            <% end %>
+         </li>
+      </ul>
+   </div>
+</aside>

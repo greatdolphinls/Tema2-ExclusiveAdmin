@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- C3 Chart Css -->
+      <%= stylesheet_link_tag    'chart_view', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- C3 Chart  Js -->
+      <%= javascript_include_tag 'chart_view', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For C3 Chart Page-->
+      <script>$(function(){c3.generate({bindto:"#lineChart",data:{columns:[["data1",30,200,100,400,150,250],["data2",50,20,10,40,15,25]],colors:{data1:"#824398",data2:"#C97CE5"}}});c3.generate({bindto:"#areaChart",data:{columns:[["data1",300,350,300,0,0,0],["data2",130,100,140,200,150,50]],types:{data1:"area",data2:"area-spline"},colors:{data1:"#FFE4AA",data2:"#9560A8"}}});c3.generate({bindto:"#scatter",data:{xs:{data1:"data1_x",data2:"data2_x"},columns:[["data1_x",3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8],["data2_x",3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],["data1",1.4,1.5,1.5,1.3,1.5,1.3,1.6,1,1.3,1.4,1,1.5,1,1.4,1.3,1.4,1.5,1,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1,1.1,1,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1,1.3,1.2,1.3,1.3,1.1,1.3],["data2",2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2,1.9,2.1,2,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2,2,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2,2.3,1.8]],colors:{data1:"#824398",data2:"#727272"},type:"scatter"}});c3.generate({bindto:"#stocked",data:{columns:[["data1",30,200,100,400,150,250],["data2",50,20,10,40,15,25]],colors:{data1:"#FFE4AA",data2:"#4FB287"},type:"bar",groups:[["data1","data2"]]}});c3.generate({bindto:"#gauge",data:{columns:[["data",91.4]],type:"gauge"},color:{pattern:["#C97CE5","#F8F9FB"]}});c3.generate({bindto:"#pie",data:{columns:[["data1",30],["data2",120]],colors:{data1:"#4FB287",data2:"#F3F6FB"},type:"pie"}})});</script>
+      
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+      <%= csrf_meta_tags %>
+      
+      <!-- Main css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+      
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+      
+      <!-- Sidebar Partials -->
+      <%= render 'layouts/sidebar' %>
+
+      <%= yield %>
+      
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %>
+      
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Analytic Js -->
+      <%= javascript_include_tag 'pages', 'data-turbolinks-track': 'reload' %>
+      
+      <!-- Custom JavaScript For Layout Options Pages-->
+      <script>$(function(){$("#fixed-navbar").click(function(){if($("body").hasClass("fixed-navbar")){$("body").removeClass("fixed-navbar");$(".status-fixed-navbar").html("Off");if($("body").hasClass("sidebar-scroll")){$("body").removeClass("sidebar-scroll");$("#navigation").slimScroll({destroy:true});$("#navigation").attr("style","");$(".status-fixed-sidebar").html("Off")}if($("body").hasClass("fixed-small-header")){$("body").removeClass("fixed-small-header");$(".status-fixed-small-header").html("Off")}}else{$("body").addClass("fixed-navbar");$(".status-fixed-navbar").html("<span class='text-success font-bold'>On</span>");$("body").removeClass("boxed");$(".status-boxed-layout").html("Off")}});$("#fixed-sidebar").click(function(){if($("body").hasClass("sidebar-scroll")){$("body").removeClass("sidebar-scroll");$("#navigation").slimScroll({destroy:true});$("#navigation").attr("style","");$(".status-fixed-sidebar").html("Off")}else{$("body").addClass("fixed-navbar");$("body").addClass("sidebar-scroll");$("#navigation").slimScroll({height:"100%",opacity:0.3,size:0,wheelStep:10});$(".status-fixed-navbar").html("<span class='text-success font-bold'>On</span>");$(".status-fixed-sidebar").html("<span class='text-success font-bold'>On</span>");$("body").removeClass("boxed");$(".status-boxed-layout").html("Off")}});$("#fixed-footer").click(function(){if($("body").hasClass("fixed-footer")){$("body").removeClass("fixed-footer");$(".status-fixed-footer").html("Off")}else{$("body").addClass("fixed-footer");$(".status-fixed-footer").html("<span class='text-success font-bold'>On</span>");$("body").removeClass("boxed");$(".status-boxed-layout").html("Off")}});$("#fixed-small-header").click(function(){if($("body").hasClass("fixed-small-header")){$("body").removeClass("fixed-small-header");$("body").removeClass("sidebar-scroll");$("#navigation").slimScroll({destroy:true});$("#navigation").attr("style","");$("body").removeClass("fixed-navbar");$(".status-fixed-small-header").html("Off");$(".status-fixed-sidebar").html("Off");$(".status-fixed-navbar").html("Off")}else{$("body").addClass("fixed-navbar");$("body").addClass("sidebar-scroll");$("#navigation").slimScroll({height:"100%",opacity:0.3,size:0,wheelStep:10});$("body").addClass("fixed-small-header");$(".status-fixed-navbar").html("<span class='text-success font-bold'>On</span>");$(".status-fixed-sidebar").html("<span class='text-success font-bold'>On</span>");$(".status-fixed-small-header").html("<span class='text-success font-bold'>On</span>");$("body").removeClass("boxed");$(".status-boxed-layout").html("Off")}});$("#boxed-layout").click(function(){if($("body").hasClass("boxed")){$("body").removeClass("boxed");$(".status-boxed-layout").html("Off")}else{$("body").addClass("boxed");$(".status-boxed-layout").html("<span class='text-success font-bold'>On</span>");$("body").removeClass("fixed-small-header");$("body").removeClass("sidebar-scroll");$("#navigation").slimScroll({destroy:true});$("#navigation").attr("style","");$("body").removeClass("fixed-navbar");$("body").removeClass("fixed-footer");$(".status-fixed-small-header").html("Off");$(".status-fixed-footer").html("Off");$(".status-fixed-sidebar").html("Off");$(".status-fixed-navbar").html("Off")}})});</script>
+      
+      <!-- Custom JavaScript For Analytic Pages-->
+      <script>$(function () { var m = [{ label: "line", data: [[1, 10], [2, 26], [3, 16], [4, 36], [5, 32], [6, 51]] }]; var n = { series: { lines: { show: true, lineWidth: 0, fill: true, fillColor: "#EFDEF7" } }, colors: ["#62cb31"], grid: { show: false }, legend: { show: false } }; $.plot($("#flot-income-chart"), m, n); var p = [{ label: "bar", data: [[1, 12], [2, 14], [3, 18], [4, 24], [5, 32], [6, 22]] }]; var j = { series: { bars: { show: true, barWidth: 0.8, fill: true, fillColor: { colors: [{ opacity: 1 }, { opacity: 1 }] }, lineWidth: 1 } }, xaxis: { tickDecimals: 0 }, colors: ["#FFE4AA"], grid: { show: false }, legend: { show: false } }; $.plot($("#flot-bar-chart"), p, j); var k = [{ label: "Data 1", data: 16, color: "rgb(216,139,245,0.4)", }, { label: "Data 2", data: 6, color: "rgb(216,139,245,0.6)", }, { label: "Data 3", data: 22, color: "rgb(216,139,245,0.8)", }, { label: "Data 4", data: 32, color: "rgb(216,139,245,1)", }]; var i = { series: { pie: { show: true } }, grid: { hoverable: true }, tooltip: true, tooltipOpts: { content: "%p.0%, %s", shifts: { x: 20, y: 0 }, defaultTheme: false } }; $.plot($("#flot-pie-chart"), k, i); var o = [{ label: "line", data: [[1, 24], [2, 15], [3, 29], [4, 34], [5, 30], [6, 40], [7, 23], [8, 27], [9, 40]] }]; var l = { series: { lines: { show: true, lineWidth: 1, fill: true, fillColor: { colors: [{ opacity: 1 }, { opacity: 1 }] } } }, xaxis: { tickDecimals: 0 }, colors: ["#824398"], grid: { tickColor: "#e4e5e7", borderWidth: 1, borderColor: "#e4e5e7", color: "#6a6c6f" }, legend: { show: false }, tooltip: true, tooltipOpts: { content: "x: %x, y: %y" } }; $.plot($("#flot-line-chart"), o, l) });</script>  
+      
+     </body>
+</html>
+

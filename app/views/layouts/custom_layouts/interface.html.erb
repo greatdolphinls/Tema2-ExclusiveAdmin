@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Interface Css -->
+      <%= stylesheet_link_tag    'interface', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Interface Js -->
+      <%= javascript_include_tag 'interface', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Alert Page-->
+      <script>$(function(){$(".demo1").click(function(){swal({title:"Welcome in Alerts",text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."})});$(".demo2").click(function(){swal({title:"Good job!",text:"You clicked the button!",type:"success"})});$(".demo3").click(function(){swal({title:"Are you sure?",text:"Your will not be able to recover this imaginary file!",type:"warning",showCancelButton:true,confirmButtonColor:"#C00000",confirmButtonText:"Yes, delete it!"},function(){swal("Booyah!")})});$(".demo4").click(function(){swal({title:"Are you sure?",text:"Your will not be able to recover this imaginary file!",type:"warning",showCancelButton:true,confirmButtonColor:"#C00000",confirmButtonText:"Yes, delete it!",cancelButtonText:"No, cancel plx!",closeOnConfirm:false,closeOnCancel:false},function(a){if(a){swal("Deleted!","Your imaginary file has been deleted.","success")}else{swal("Cancelled","Your imaginary file is safe :)","error")}})});toastr.options={debug:false,newestOnTop:false,positionClass:"toast-top-center",closeButton:true,toastClass:"animated fadeInDown",};$(".devdapDemo1").click(function(){toastr.info("Info - This is a custom devdap info notification")});$(".devdapDemo2").click(function(){toastr.success("Success - This is a devdap success notification")});$(".devdapDemo3").click(function(){toastr.warning("Warning - This is a devdap warning notification")});$(".devdapDemo4").click(function(){toastr.error("Error - This is a devdap error notification")})});</script>
+   
+    
+      <!-- Custom JavaScript For Draggable Panel Page-->
+      <script>$(function(){var b="[class*=col]";var c=".panel-body";var a="[class*=col]";$(b).sortable({handle:c,connectWith:a,tolerance:"pointer",forcePlaceholderSize:true,opacity:0.8}).disableSelection()});</script>
+      
+      <!-- Custom JavaScript For Loading Buttons Page-->
+      <script>$(function(){$(".ladda-button").ladda("bind",{timeout:2000});Ladda.bind(".progress-demo .ladda-button",{callback:function(b){var d=0;var c=setInterval(function(){d=Math.min(d+Math.random()*0.1,1);b.setProgress(d);if(d===1){b.stop();clearInterval(c)}},200)}});var a=$(".ladda-button-demo").ladda();a.click(function(){a.ladda("start");setTimeout(function(){a.ladda("stop")},12000)})});</script>
+    
+      <!-- Custom JavaScript For Tour Page-->
+      <script>$(function () { var c = new Tour({ backdrop: true, onShown: function (d) { $(".animated").removeClass("fadeIn"); $(".animated-panel").removeClass("zoomIn") }, steps: [{ element: ".tour-1", title: "Page header", content: "Place your page title and breadcrumb. Select small or large header or give the user choice to change the size.", placement: "bottom" }, { element: ".tour-2", title: "Tour title", content: "Add any components you want from the devdap theme - graphs, tables, calendars, lists, create your unique app view with devdap.", placement: "top" }, { element: ".tour-3", title: "Tour title", content: "This is a 3 step on our tour. You can easy set a placement of tour tooltip.", placement: "right" }, { element: ".tour-4", title: "Tour title", content: "In this 4 step is a description of how to use tour directive.", placement: "left" }] }); c.init(); $(".run-tour").click(function () { c.restart() }); var b = [{ label: "line", data: [[1, 10], [2, 26], [3, 16], [4, 36], [5, 32], [6, 51]] }]; var a = { series: { lines: { show: true, lineWidth: 0, fill: true, fillColor:"rgb(201,124,229,0.4)"}},colors:["#62cb31"],grid:{show:false},legend:{show:false}};$.plot($("#flot-income-chart"),b,a)});</script>
+   
+   </body>
+</html>

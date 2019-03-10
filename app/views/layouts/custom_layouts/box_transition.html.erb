@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Overview Page -->
+      <script>$(function(){$(".animate-panel-demo").demoStagger();$(".runAnimation").click(function(){var c=$(".setEffect").attr("data-effect");var d=$(".animation-select").val();var b=$("#acontainer").html();var a=b.replace(new RegExp(c,"g"),d);$(".runIt").remove();setTimeout(function(){$("#acontainer").append(a)})})});$.fn.demoStagger=function(){var e=$(this);var i=$(this).data("effect");var f=$(this).data("delay");var d=$(this).data("child");if(!i){i="zoomIn"}if(!f){f=0.06}else{f=f/10}if(!d){d=".row > div"}else{d="."+d}var g=0;var c=Math.abs(f)+g;var a=e.find(d);a.addClass("opacity-0");a=e.find(d);a.addClass("animated-panel").addClass(i);var b=a.length+10;var h=(b*f*10000)/10;a.each(function(k,l){c+=f;var j=Math.round(c*10)/10;$(l).css("animation-delay",j+"s");$(l).removeClass("opacity-0")})};</script>
+      
+      
+      </body>
+</html>

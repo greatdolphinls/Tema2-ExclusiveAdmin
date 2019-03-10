@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- chart_view Css -->
+      <%= stylesheet_link_tag    'chart_view', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Chart View Js -->
+      <%= javascript_include_tag 'chart_view', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Chart Js Page-->
+      <script>$(function(){var B={labels:["January","February","March","April","May","June","July"],datasets:[{label:"Dt 1",backgroundColor:"rgba(200,121,231, 0.5)",pointBorderWidth:1,pointBackgroundColor:"rgba(130,67,152,1)",pointRadius:3,pointBorderColor:"#ffffff",borderWidth:1,data:[16,32,18,26,42,33,44]},{label:"Dt 2",backgroundColor:"rgba(255,228,170,0.5)",borderColor:"rgba(255,228,170,1)",pointBorderWidth:1,pointBackgroundColor:"rgba(220,220,220,1)",pointRadius:3,pointBorderColor:"#ffffff",borderWidth:1,data:[22,44,67,43,76,45,12]}]};var r={responsive:true};var q=document.getElementById("lineOptions").getContext("2d");new Chart(q,{type:"line",data:B,options:r});var p={labels:["January","February","March","April","May","June","July"],datasets:[{label:"Dt 1",backgroundColor:"rgba(255,228,170,0.8)",data:[33,48,40,19,54,27,54],lineTension:0,pointBorderWidth:1,pointBackgroundColor:"rgba(130,67,152,1)",pointRadius:3,pointBorderColor:"#ffffff",borderWidth:1}]};var s={responsive:true,legend:{display:false}};var q=document.getElementById("sharpLineOptions").getContext("2d");new Chart(q,{type:"line",data:p,options:s});var A={responsive:true};var v={labels:["January","February","March","April","May","June","July"],datasets:[{label:"Dt 1",backgroundColor:"rgba(79,178,135)",borderColor:"rgba(79,178,135)",highlightFill:"#4b9877",highlightStroke:"#4b9877",borderWidth:1,data:[65,59,80,81,56,55,40]},{label:"Dt 2",backgroundColor:"rgba(255,228,170)",borderColor:"rgba(255,228,170)",highlightFill:"#f5d690",highlightStroke:"#f5d690",borderWidth:1,data:[28,48,40,19,86,27,90]}]};var q=document.getElementById("barOptions").getContext("2d");new Chart(q,{type:"bar",data:v,options:A});var w={responsive:true,legend:{display:false}};var C={labels:["January","February","March","April","May","June","July"],datasets:[{label:"Dt 1",backgroundColor:"rgba(130,67,152,0.8)",borderColor:"rgba(130,67,152)",highlightFill:"rgba(201,124,229,0.75)",highlightStroke:"rgba(201,124,229,1)",borderWidth:1,data:[15,20,30,40,30,50,60]}]};var q=document.getElementById("singleBarOptions").getContext("2d");new Chart(q,{type:"bar",data:C,options:w});var z={datasets:[{data:[120,130,100],backgroundColor:["rgba(201,124,229,0.6)","rgba(201,124,229,0.8)","rgba(201,124,229,1)"],label:"Dt 1"}],labels:["devdap","Inspinia","Luna"]};var x={responsive:true};var q=document.getElementById("polarOptions").getContext("2d");new Chart(q,{type:"polarArea",data:z,options:x});var t={labels:["App","Software","Laptop"],datasets:[{data:[20,120,100],backgroundColor:["rgba(255,228,170,0.6)","rgba(255,228,170,0.8)","rgba(255,228,170,1)"],hoverBackgroundColor:["rgba(130,67,152,0.6)","rgba(130,67,152,0.8)","rgba(130,67,152,1)"]}]};var D={responsive:true};var q=document.getElementById("doughnutChart").getContext("2d");new Chart(q,{type:"doughnut",data:t,options:D});var u={labels:["Eating","Drinking","Sleeping","Designing","Coding","Cycling","Running"],datasets:[{label:"Dt 1",backgroundColor:"rgba(79,178,135,0.4)",borderColor:"rgba(79,178,135,0.6)",pointBackgroundColor:"rgba(79,178,135,0.8)",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"#62cb31",borderWidth:1,data:[65,59,66,45,56,55,40]},{label:"Dt 2",backgroundColor:"rgba(79,178,135,0.6)",borderColor:"rgba(79,178,135,0.6)",pointBackgroundColor:"rgba(79,178,135,0.8)",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"#62cb31",borderWidth:1,data:[28,12,40,19,63,27,87]}]};var y={responsive:true};var q=document.getElementById("radarChart").getContext("2d");new Chart(q,{type:"radar",data:u,options:y})});</script>
+     
+      <!-- Custom JavaScript For Flot Chart Page-->
+      <script>$(function(){var u=[[0,26],[1,24],[2,29],[3,26],[4,33],[5,26],[6,36],[7,28]];var x={series:{splines:{show:true,tension:0.4,lineWidth:1,fill:0.5},},grid:{tickColor:"#e4e5e7",borderWidth:1,borderColor:"#e4e5e7",color:"#6a6c6f"},colors:["#C97CE5","#efefef"],};$.plot($("#flot-line-chart"),[u],x);var v=[{label:"bar",data:[[1,12],[2,14],[3,18],[4,24],[5,32],[6,22]]}];var i={series:{bars:{show:true,barWidth:0.8,fill:true,fillColor:{colors:[{opacity:0.6},{opacity:0.6}]},lineWidth:1}},xaxis:{tickDecimals:0},colors:["#C97CE5"],grid:{color:"#e4e5e7",hoverable:true,clickable:true,tickColor:"#D4D4D4",borderWidth:0,borderColor:"e4e5e7",},legend:{show:false},tooltip:true,tooltipOpts:{content:"x: %x, y: %y"}};$.plot($("#flot-bar-chart"),v,i);var w=[{label:"Data 1",data:16,color:"rgba(201,124,229,0.6)",},{label:"Data 2",data:6,color:"rgba(201,124,229,1)",},{label:"Data 3",data:22,color:"rgba(201,124,229,0.4)",},{label:"Data 4",data:32,color:"rgba(201,124,229,0.2)",}];var o={series:{pie:{show:true}},grid:{hoverable:true},tooltip:true,tooltipOpts:{content:"%p.0%, %s",shifts:{x:20,y:0},defaultTheme:false}};$.plot($("#flot-pie-chart"),w,o);var y=[{label:"line",data:[[1,24],[2,15],[3,29],[4,34],[5,30],[6,40],[7,23],[8,27],[9,40]]}];var p={series:{lines:{show:true,lineWidth:1,fill:true,fillColor:{colors:[{opacity:0.5},{opacity:0.5}]}}},xaxis:{tickDecimals:0},colors:["#C97CE5"],grid:{tickColor:"#e4e5e7",borderWidth:1,borderColor:"#e4e5e7",color:"#6a6c6f"},legend:{show:false},tooltip:true,tooltipOpts:{content:"x: %x, y: %y"}};$.plot($("#flot-area-chart"),y,p);var s=[],q=[];for(var t=0;t<14;t+=0.5){s.push([t,Math.sin(t)]);q.push([t,Math.cos(t)])}var z=[{data:s,label:"sin(x)"},{data:q,label:"cos(x)"}];var r={series:{lines:{show:true},points:{show:true}},grid:{tickColor:"#e4e5e7",borderWidth:1,borderColor:"#e4e5e7",color:"#6a6c6f"},yaxis:{min:-1.2,max:1.2},colors:["#C97CE5","#efefef"],};$.plot($("#flot-sin-chart"),z,r)});</script>
+    
+      </body>
+</html>

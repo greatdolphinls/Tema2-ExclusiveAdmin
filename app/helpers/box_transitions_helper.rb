@@ -1,0 +1,2 @@
+module BoxTransitionsHelper
+end

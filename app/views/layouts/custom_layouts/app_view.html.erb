@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- App View Css -->
+      <%= stylesheet_link_tag    'app_view', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- App View Js -->
+      <%= javascript_include_tag 'app_view', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Gallery Page-->
+      <style>.lightBoxGallery{text-align:center}.lightBoxGallery a{margin:5px;display:inline-block}</style>
+      
+      <!-- Custom JavaScript For Calendar Page-->
+      <script>$(function () { $("#external-events div.external-event").each(function () { $(this).data("event", { title: $.trim($(this).text()), stick: true }); $(this).draggable({ zIndex: 1111999, revert: true, revertDuration: 0 }) }); var b = new Date(); var c = b.getDate(); var a = b.getMonth(); var e = b.getFullYear(); $("#calendar").fullCalendar({ header: { left: "prev,next today", center: "title", right: "month,agendaWeek,agendaDay" }, editable: true, droppable: true, drop: function () { if ($("#drop-remove").is(":checked")) { $(this).remove() } }, events: [{ title: "All Day Event", start: new Date(e, a, 1) }, { title: "Long Event", start: new Date(e, a, c - 5), end: new Date(e, a, c - 2), }, { id: 999, title: "Repeating Event", start: new Date(e, a, c - 3, 16, 0), allDay: false, }, { title: "devdap task", start: new Date(e, a, c + 5, 19, 0), end: new Date(e, a, c + 6, 22, 30), allDay: false, backgroundColor: "#C97CE5", borderColor:"#C97CE5"},{id:999,title:"Repeating Event",start:new Date(e,a,c+4,16,0),allDay:false},{title:"Meeting",start:new Date(e,a,c,10,30),allDay:false},{title:"Lunch",start:new Date(e,a,c,12,0),end:new Date(e,a,c,14,0),allDay:false},{title:"Birthday Party",start:new Date(e,a,c+1,19,0),end:new Date(e,a,c+1,22,30),allDay:false},{title:"Click for Google",start:new Date(e,a,28),end:new Date(e,a,29),url:"http://google.com/"}],})});</script>
+    
+      <!-- Custom JavaScript For Search Page-->
+      <script>$(function(){$(".input-group.date").datepicker();$("#demo1").TouchSpin({min:0,max:100,step:0.1,decimals:2,boostat:5,maxboostedstep:10});$("#demo2").TouchSpin({verticalbuttons:true});$(".select2").select2()});</script>
+      
+      <!-- Custom JavaScript For Mail Box Compose Page-->
+      <script>$(function(){$(".summernote").summernote({toolbar:[["headline",["style"]],["style",["bold","italic","underline","superscript","subscript","strikethrough","clear"]],["textsize",["fontsize"]],["alignment",["ul","ol","paragraph","lineheight"]],]})});</script>
+     
+      <!-- Custom JavaScript For Project Page-->
+      <script>$(function () { var c = { labels: ["January", "February", "March", "April"], datasets: [{ label: "Example dataset", backgroundColor: "rgba(201,124,229,0.5)", borderColor: "rgba(201,124,229,1)", pointBackgroundColor:"#824398",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"rgba(26,179,148,1)",data:[17,21,19,24]}]};var b={responsive:true,legend:{display:false}};var a=document.getElementById("lineOptions").getContext("2d");new Chart(a,{type:"line",data:c,options:b})});</script>
+      </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+      <%= csrf_meta_tags %>
+      
+      <!-- Main css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+      
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+      
+      <!-- Sidebar Partials -->
+      <%= render 'layouts/sidebar' %>
+
+      <%= yield %>
+      
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %>
+      
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Index Js -->
+      <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript Tags-->
+      <script>$(function () { var a = [[0, 55], [1, 48], [2, 40], [3, 36], [4, 40], [5, 60], [6, 50], [7, 51]]; var e = [[0, 56], [1, 49], [2, 41], [3, 38], [4, 46], [5, 67], [6, 57], [7, 59]]; var d = { series: { splines: { show: true, tension: 0.4, lineWidth: 1, fill: 0.4 }, }, grid: { tickColor: "#f0f0f0", borderWidth: 1, borderColor: "f0f0f0", color: "#6a6c6f" }, colors: ["#C97CE5", "#F8F9FB"], }; $.plot($("#flot-line-chart"), [a, e], d); var c = [{ label: "line", data: [[1, 10], [2, 26], [3, 16], [4, 36], [5, 32], [6, 51]] }]; var b = { series: { lines: { show: true, lineWidth: 0, fill: true, fillColor: "#EFDEF7" } }, colors: ["#62cb31"], grid: { show: false }, legend: { show: false } }; $.plot($("#flot-income-chart"), c, b) });</script>
+      <script>$(function () { var c = { labels: ["January", "February", "March", "April"], datasets: [{ label: "Example dataset", backgroundColor: "rgba(201,124,229,0.3)", borderColor: "rgba(201,124,229,0.7)", pointBackgroundColor: "rgba(130,67,152,1)", pointBorderColor: "#fff", pointHoverBackgroundColor: "#fff", pointHoverBorderColor: "rgba(26,179,148,1)", data: [17, 21, 19, 24] }] }; var b = { responsive: true, legend: { display: false } }; var a = document.getElementById("lineOptions").getContext("2d"); new Chart(a, { type: "line", data: c, options: b }) });</script>
+   </body>
+</html>
+

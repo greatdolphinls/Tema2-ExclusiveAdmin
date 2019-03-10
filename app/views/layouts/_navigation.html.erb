@@ -1,0 +1,170 @@
+<div id="header">
+        <div class="color-line">
+        </div>
+        <div id="logo" class="light-version">
+        <%= link_to root_path do %>
+            <%= content_tag :span, "Exclusive Admin" %>
+            
+        <% end %>
+        </div>
+        <nav role="navigation">
+            <div class="header-link hide-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="small-logo">
+                <span class="text-primary">Exclusive Admin </span>
+            </div>
+            <div class="mobile-menu">
+                <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="collapse mobile-navbar" id="mobile-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                        <%= link_to "Login", common_views_Login_path %>
+                        </li>
+                        <li>
+                        <%= link_to "Logout", common_views_LockScreen_path %>
+                        </li>
+                        <li>
+                        <%= link_to "Profile", app_views_Profile_path %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav no-borders">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="pe-7s-speaker"></i>
+                        </a>
+                        <ul class="dropdown-menu hdropdown notification animated flipInX">
+                            <li>
+                                <a>
+                                    <span class="label label-success">NEW</span>
+                                    <span class="text-info">It is a long established.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="label label-warning">WAR</span>
+                                    <span class="text-info"> There are many variations.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="label label-danger">ERR</span>
+                                    <span class="text-info"> Contrary to popular belief.</span>
+                                </a>
+                            </li>
+                            <li class="summary">
+                                <a href="#">
+                                    <span class="text-info">See all notifications</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="pe-7s-keypad"></i>
+                        </a>
+                        <div class="dropdown-menu hdropdown bigmenu animated flipInX">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="projects.html">
+                                                <i class="pe pe-7s-portfolio text-info"></i>
+                                                <h5 class="text-info">Projects</h5>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="mailbox.html">
+                                                <i class="pe pe-7s-mail text-warning"></i>
+                                                <h5 class="text-warning">Email</h5>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="contacts.html">
+                                                <i class="pe pe-7s-users text-primary"></i>
+                                                <h5 class="text-primary">Contacts</h5>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="forum.html">
+                                                <i class="pe pe-7s-comment text-info"></i>
+                                                <h5 class="text-info">Forum</h5>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="analytics.html">
+                                                <i class="pe pe-7s-graph1 text-danger"></i>
+                                                <h5 class="text-danger">Analytics</h5>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="file_manager.html">
+                                                <i class="pe pe-7s-box1 text-primary"></i>
+                                                <h5 class="text-primary">Files</h5>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                            <i class="pe-7s-mail"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu hdropdown animated flipInX">
+                            <div class="title">
+                                You have 4 new messages
+                            </div>
+                            <li>
+                                <a>
+                                    <span class="text-primary">
+                                        It is a long established.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="text-primary">
+                                        There are many variations.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="text-primary">
+                                        Lorem Ipsum is simply dummy.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="text-primary">
+                                        Contrary to popular belief.
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="summary">
+                                <a href="#">
+                                    <span class="text-info">See All Messages</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">
+                            <i class="pe-7s-upload pe-rotate-90"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>

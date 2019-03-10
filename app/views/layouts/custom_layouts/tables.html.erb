@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+      <%= csrf_meta_tags %>
+      
+      <!-- Main css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Tables css -->
+      <%= stylesheet_link_tag    'tables', 'data-turbolinks-track': 'reload' %>
+     
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+      
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+      
+      <!-- Sidebar Partials -->
+      <%= render 'layouts/sidebar' %>
+
+      <%= yield %>
+      
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %>
+      
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Tables Js -->
+      <%= javascript_include_tag 'tables', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Foo Table Page-->
+      <script>$(function(){$("#example1").footable();$("#example2").footable()});</script>
+      
+      <!-- Custom JavaScript For Data Tables Page -->
+      <script>$(function(){$("#example1").dataTable({ajax:"api/datatables.json",dom:"<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",lengthMenu:[[10,25,50,-1],[10,25,50,"All"]],buttons:[{extend:"copy",className:"btn-sm"},{extend:"csv",title:"ExampleFile",className:"btn-sm"},{extend:"pdf",title:"ExampleFile",className:"btn-sm"},{extend:"print",className:"btn-sm"}]});$("#example2").dataTable()});</script>
+      </body>
+</html>
+

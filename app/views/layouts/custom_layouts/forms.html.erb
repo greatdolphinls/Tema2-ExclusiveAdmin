@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exclusive Admin | Responsive Admin Theme</title>
+     
+      <!-- Favicon -->
+      <%= favicon_link_tag 'favicons.ico' %>
+     
+      <%= csrf_meta_tags %>
+
+      <!-- Main Css -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Forms Css -->
+      <%= stylesheet_link_tag    'forms', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body class="light-skin fixed-navbar sidebar-scroll">
+
+      <!-- Menu Partials -->
+      <%= render 'layouts/navigation' %>
+   
+      <!-- Menu Partials -->
+      <%= render 'layouts/sidebar' %>
+      
+      <%= yield %>
+   
+      <!-- Footer Partials -->
+      <%= render 'layouts/footer' %> 
+
+      <!-- Main Js -->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Forms Js -->
+      <%= javascript_include_tag 'forms', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Custom JavaScript For Wizard Page -->
+      <script>$(function(){$('a[data-toggle="tab"]').on("shown.bs.tab",function(a){$('a[data-toggle="tab"]').removeClass("btn-primary");$('a[data-toggle="tab"]').addClass("btn-default");$(this).removeClass("btn-default");$(this).addClass("btn-primary")});$(".next").click(function(){var a=$(this).parents(".tab-pane").next().attr("id");$("[href=#"+a+"]").tab("show")});$(".prev").click(function(){var a=$(this).parents(".tab-pane").prev().attr("id");$("[href=#"+a+"]").tab("show")});$(".submitWizard").click(function(){var b=$(".approveCheck").is(":checked");if(b){$("[href=#step1]").tab("show");var a=$("#simpleForm").serialize();swal({title:"Thank you!",text:"You approved our example form!",type:"success"})}else{swal({title:"Error!",text:"You have to approve form checkbox.",type:"error"})}})});</script>
+      
+      <!-- Custom JavaScript For Form Extended Page-->
+      <script>$(function(){$("#datepicker").datepicker();$("#datepicker").on("changeDate",function(a){$("#my_hidden_input").val($("#datepicker").datepicker("getFormattedDate"))});$("#datapicker2").datepicker();$(".input-group.date").datepicker({});$(".input-daterange").datepicker({});$("#demo1").TouchSpin({min:0,max:100,step:0.1,decimals:2,boostat:5,maxboostedstep:10,});$("#demo2").TouchSpin({verticalbuttons:true});$("#demo3").TouchSpin({postfix:"%"});$("#demo4").TouchSpin({postfix:"a button",postfix_extraclass:"btn btn-default"});$(".js-source-states").select2();$(".js-source-states-2").select2();$.fn.editable.defaults.mode="inline";$.fn.editable.defaults.url="#";$("#username").editable({url:"#",type:"text",pk:1,name:"username",title:"Enter username"});$("#firstname").editable({validate:function(a){if($.trim(a)==""){return"This field is required"}}});$("#sex").editable({prepend:"not selected",source:[{value:1,text:"Male"},{value:2,text:"Female"}],display:function(d,c){var a={"":"gray",1:"green",2:"blue"},b=$.grep(c,function(e){return e.value==d});if(b.length){$(this).text(b[0].text).css("color",a[d])}else{$(this).empty()}}});$("#dob").editable();$("#event").editable({placement:"right",combodate:{firstItem:"name"}});$("#comments").editable({showbuttons:"bottom"});$("#fruits").editable({pk:1,limit:3,source:[{value:1,text:"banana"},{value:2,text:"peach"},{value:3,text:"apple"},{value:4,text:"watermelon"},{value:5,text:"orange"}]});$("#user .editable").on("hidden",function(c,b){if(b==="save"||b==="nochange"){var a=$(this).closest("tr").next().find(".editable");if($("#autoopen").is(":checked")){setTimeout(function(){a.editable("show")},300)}else{a.focus()}}});$(".clockpicker").clockpicker({autoclose:true});$("#datetimepicker1").datetimepicker()});</script>
+      
+      <!-- Custom JavaScript For Text Editor Page-->
+      <script>$(function(){$(".summernote").summernote();$(".summernote1").summernote({toolbar:[["headline",["style"]],["style",["bold","italic","underline","superscript","subscript","strikethrough","clear"]],["textsize",["fontsize"]],["alignment",["ul","ol","paragraph","lineheight"]],]});$(".summernote2").summernote({airMode:true,})});</script>
+      
+      <!-- Custom JavaScript For Validation Page-->
+      <script>$(function(){$("#form").validate({rules:{password:{required:true,minlength:3},url:{required:true,url:true},number:{required:true,number:true},max:{required:true,maxlength:4}},submitHandler:function(a){a.submit()}});$("#form_2").validate({rules:{name:{required:true,minlength:3},username:{required:true,minlength:5},url:{required:true,url:true},number:{required:true,number:true},last_name:{required:true,minlength:6}},messages:{number:{required:"(Please enter your phone number)",number:"(Please enter valid phone number)"},last_name:{required:"This is custom message for required",minlength:"This is custom message for min length"}},submitHandler:function(a){a.submit()},errorPlacement:function(a,b){$(b).closest("form").find("label[for='"+b.attr("id")+"']").append(a)},errorElement:"span",})});</script>
+      
+      </body>
+</html>
